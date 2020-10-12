@@ -11,10 +11,6 @@ namespace Ventas.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
 
         private readonly ILogger<WeatherForecastController> _logger;
 
@@ -26,14 +22,20 @@ namespace Ventas.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            //var rng = new Random();
+            //return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            //{
+            //    //Date = DateTime.Now.AddDays(index),
+            //    //TemperatureC = rng.Next(-20, 55),
+            //    //Summary = Summaries[rng.Next(Summaries.Length)]
+            //})
+            //.ToArray();
+
+            //Esta función devuelve un Enumerable (lista) de objetos
+            List<WeatherForecast> lst = new List<WeatherForecast>();
+            lst.Add(new WeatherForecast() { Id = 1, Nombre = "Juan" });
+            lst.Add(new WeatherForecast() { Id = 2, Nombre = "Pedro" });
+            return lst;
         }
     }
 }
