@@ -4,11 +4,11 @@ import { Column } from "primereact/column";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import { InputText } from "primereact/inputtext";
-import { InputNumber } from "primereact/inputnumber";
+// import { InputNumber } from "primereact/inputnumber";
 // import ClienteService from "../../services/ClienteService";
 import * as Constants from "../../Constants";
 // import axios from 'axios'
-import classNames from "classnames";
+// import classNames from "classnames";
 // import Contador from "./Contador"
 
 const baseUrl = Constants.APIURL + '/cliente';

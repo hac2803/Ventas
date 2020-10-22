@@ -4,13 +4,15 @@ import { Layout } from './components/Layout';
 import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
-import { ClienteList } from './components/cliente/ClienteList';
+// import { ClienteList } from './components/cliente/ClienteListOld';
 import ClienteListHooks from './components/cliente/ClienteListHooks';
+import ComponentePadre from './components/context_test/componentePadre';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 
 import './custom.css'
+
 
 //export default class App extends Component {
 //  static displayName = App.name;
@@ -31,8 +33,8 @@ export default () => (
     <Route exact path='/' component={Home} />
     <Route path='/counter' component={Counter} />
     <Route path='/fetch-data' component={FetchData} />
-    <Route path='/ClienteList' component={ClienteList} />
     <Route path='/ClienteListHooks' component={ClienteListHooks} />
+    <Route path='/Context_Test' component={ComponentePadre} />
   </Layout>
 );
 
